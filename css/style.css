@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: 'Lato', sans-serif; }
+
 header {
   display: flex;
   height: 90px;
@@ -25,3 +28,62 @@ header {
       font-family: 'Coda Caption', sans-serif; }
       header nav a:hover {
         color: #fde400; }
+
+.footer {
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.75); }
+  .footer--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .footer--container a {
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none; }
+      .footer--container a:hover {
+        color: silver; }
+    .footer--container .footer--nav {
+      display: flex;
+      list-style: none; }
+  .footer--icon .fab {
+    font-size: 1.5rem; }
+  .footer p {
+    text-align: center;
+    padding-top: 1rem;
+    color: silver; }
+
+@media (max-width: 760px) {
+  #footer p {
+    font-size: 12px; }
+  #footer .footer--container a {
+    font-size: 12px; }
+    #footer .footer--container a .fab {
+      font-size: 1rem; } }
+
+@media (max-width: 480px) {
+  .footer .footer--container .footer--nav {
+    display: flex;
+    flex-direction: column; }
+  .footer .footer--icon a::before {
+    padding: 1rem; } }
+
+#contactUs {
+  padding: 2rem;
+  background-color: #E1B000; }
+  #contactUs h2 {
+    text-align: center;
+    padding: 1.5rem; }
+  #contactUs .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    #contactUs .contact-container .map {
+      width: 100%; }
+    #contactUs .contact-container .info-p {
+      padding: 1.5rem 0 1.5rem 2rem; }
+      #contactUs .contact-container .info-p .info-c {
+        display: flex; }
+        #contactUs .contact-container .info-p .info-c i {
+          padding: 0 5px 3px 0; }
+      #contactUs .contact-container .info-p .info-detail {
+        margin-bottom: 1rem; }

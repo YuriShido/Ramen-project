@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel=“preconnect” href=“https://fonts.gstatic.com”>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
     <title>Mr.Ramen</title>
 </head>
 <body>
@@ -32,9 +35,38 @@
 
     <div class="menu" id="menu"></div>
 
-    <div class="contactUs" id="contactU"></div>
+    <div class="contactUs" id="contactUs">
+        <h2>~ Contact Us ~</h2>
+        <div class="contact-container">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7585354037487!2d-123.1221152843059!3d49.28097247933118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671821c149771%3A0xd64c377f2df4b19f!2sCornerstone%20International%20Community%20College%20of%20Canada%20-%20Tech%20Campus!5e0!3m2!1sja!2sca!4v1612848060836!5m2!1sja!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="info-p">
+                <div class="info-c">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>ADRESS</h4>
+                </div>
+                <p class=info-detail>816 Granville St, Vancouver, BC V6Z 1K3</p>
+                <div class="info-c">
+                    <i class="fas fa-phone"></i>
+                    <h4>CALL</h4>
+                </div>
+                <p class=info-detail>+1(604)620-1111</p>
+                <div class="info-c">
+                    <i class="fas fa-clock"></i>
+                    <h4>OPEN HOURS</h4>
+                </div>
+                <p>Monday-Thursday: 11am - 3pm, 5pm - 10pm</p>
+                <p>Friday-Sunday: 11am - 10pm</p>
+                <p class=info-detail>*Last call is 30 min before closing time</p>
+                <div class="info-c">
+                    <i class="fas fa-info"></i>
+                    <h4>INFORMATION</h4>
 
-    <footer id="footer">
+                </div>
+                <p class=info-detail>We do not accept reservations.</p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
         <div class="footer--container" >
             <ul class="footer--nav">
                 <li><a href="#">Home</a></li>
@@ -49,10 +81,11 @@
                 <a href="https://instagram.com" class="icon-b"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
+        
         <p>Copyright &copy; Mr. Ramen 2021</p>
     </footer>
 
-
+    
     
     <script src="ramen.js"></script>
 </body>
