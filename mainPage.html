@@ -7,36 +7,381 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel=“preconnect” href=“https://fonts.gstatic.com”>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <title>Mr.Ramen</title>
 </head>
 <body>
 
-    
-    <header>
-        <div class="logo">
-            <img src="" alt=" Mr.Ramen logo ">
-        </div>
-        <nav>
+   <!-- hamburger -->
+
+   <div class="ham__wrapper">
+    <span class="ham" id="ham">
+        <span class="ham_line ham_line1"></span>
+        <span class="ham_line ham_line2"></span>
+        <span class="ham_line ham_line3"></span>
+    </span>
+
+    <div class="menu_wrapper" id="menu_wrapper">
+        <div class="menu">
             <ul>
-                <li class="home"><a href="#">Home</a></li>
-                <li class="aboutUs"><a href="#aboutUs">AboutUs</a></li>
-                <li class="menu"><a href="#menu">Menu</a></li>
-                <li class="contactUs"><a href="#contactUs">ContactUs</a></li>
-                <li class="TakeOutOrder"><a href="takeOut.html">TakeOutOrder</a></li>
+                <li><a class="hamBtn" id="ham-top" href="#">Home</a></li>
+                <li><a class="hamBtn" id="ham-about" href="#aboutUs">AboutUs</a></li>
+                <li><a class="hamBtn" id="ham-products" href="#menu">Menu</a></li>
+                <li><a class="hamBtn" id="ham-location" href="#contactUs">ContactUs</a></li>
+                <li><a class="hamBtn" id="ham-contact" href="takeOut.html">TakeOutOrder</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
+</div>
+
+<!-- hamburger -->
+
+<header>
+    <div class="logo">
+        <img src="img/logo_rectangle.png" alt=" Mr.Ramen logo ">
+    </div>
+    <nav>
+        <ul>
+            <li ><a href="#">Home</a></li>
+            <li ><a href="#aboutUs">AboutUs</a></li>
+            <li ><a href="#menu">Menu</a></li>
+            <li ><a href="#contactUs">ContactUs</a></li>
+            <li ><a href="takeOut.html">TakeOutOrder</a></li>
+            <li ><a href="takeOut.html">🛒</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <div class="slider">
+          <div class="slides">
+            <!--  The last slide goes before the first one,
+              because the slideshow shows the second slide on load by default. -->
+            <div class="slides__img" id="" style="background-image: url('img/gyoza.jpg')">
+              <div class="slides__img__filter"></div>
+              <div class="slide__caption">
+                <h1 class="slide__caption__title">Fifth slide</h1>
+                <h2 class="slide__caption__subtitle">This is the fifth slide.</h2>
+                <h3 class="slide__caption__text">Lorem ipsum dolor sit amet.</h3>
+              </div>
+            </div>
+      
+            <div class="slides__img" id="" style="background-image: url('img/cooking.jpg')">
+              <div class="slides__img__filter"></div>
+              <div class="slide__caption">
+                <h1 class="slide__caption__title">First slide</h1>
+                <h2 class="slide__caption__subtitle">This is the first slide.</h2>
+                <h3 class="slide__caption__text">Lorem ipsum dolor sit amet.</h3>
+              </div>
+            </div>
+      
+            <div class="slides__img" id="" style="background-image: url('img/homemadeNoodle.jpg')">
+              <div class="slides__img__filter"></div>
+              <div class="slide__caption">
+                <h1 class="slide__caption__title">Second slide</h1>
+                <h2 class="slide__caption__subtitle">This is the second slide.</h2>
+                <h3 class="slide__caption__text">Lorem ipsum dolor sit amet.</h3>
+              </div>
+            </div>
+      
+            <div class="slides__img" id="" style="background-image: url('img/ramen.jpg')">
+              <div class="slides__img__filter"></div>
+              <div class="slide__caption">
+                <h1 class="slide__caption__title">Third slide</h1>
+                <h2 class="slide__caption__subtitle">This is the third slide.</h2>
+                <h3 class="slide__caption__text">Lorem ipsum dolor sit amet.</h3>
+              </div>
+            </div>
+      
+            <div class="slides__img" id="" style="background-image: url('img/customer.jpg')">
+              <div class="slides__img__filter"></div>
+              <div class="slide__caption">
+                <h1 class="slide__caption__title">Fourth slide</h1>
+                <h2 class="slide__caption__subtitle">This is the fourth slide.</h2>
+                <h3 class="slide__caption__text">Lorem ipsum dolor sit amet.</h3>
+              </div>
+            </div>
+      
+          </div>
+      
+        </div>
+        <!-- / slider -->
+      
+        <!-- #Controls -->
+        <a class="control fas fa-chevron-left" id="prev"></a>
+        <a class="control fas fa-chevron-right" id="next"></a>
+      
+        <!-- #Position dots -->
+        <div class="dots">
+          <span class="dots__single" id=""></span>
+          <span class="dots__single" id=""></span>
+          <span class="dots__single" id=""></span>
+          <span class="dots__single" id=""></span>
+          <span class="dots__single" id=""></span>
+        </div>
+      </div>
+      <!-- / slideshow -->
+</div>
+
+<div class="aboutUs" id="aboutUs">
+    <h1>~ About Us ~</h1>
+    <div class="about">
+        <div class="image">
+            <img src="./img/logo_square .png" alt="logo">
+        </div>
+        <div class="text">
+            <h1>Mr.Ramen</h1>
+            <br>
+            <p>Research into the taste of noodles, the thickness noodles best suited to the broth, the harmony between ingredients, and the balances of flavors have all been used to create our original noodles. We hope you will enjoy our straight, ultra-fine noodlesʼ body and chewy texture. The “bite” hardness of the noodles can be adjusted during the boiling process, so we can prepare them according to your taste.</p>
+            <br>
+            <p>Our broth is made by boiling pork bones without using additional ingredients. Pork bones and carefully cleaned, after which they are gently boiled for an extended period of time under the diligent watchful eyes of our kitchen staff. Abundant in pork bone extract, our broth, has a powerful body, umami, and a crisp aftertaste.</p>
+        </div>
+    </div>
+</div>
 
     
-    <div class="hero"></div>
+ 
 
-    <div class="aboutUs" id="aboutUs"></div>
 
-    <div class="menu" id="menu"></div>
+    <div class="Menu" id="menu">
+        <h1>~ MENU ~</h1>
+        <div class="Menu--container">
+            <div class="Menu--box ramenBox">
+                <h3>Ramen</h3>
+                <p id="more">see more ></p>
+            </div>
+            <div class="Menu--box appetizerBox">
+                <h3>Appetizer</h3>
+                <p id="more">see more ></p>
+            </div>
+            <div class="Menu--box drinkBox">
+                <h3>Drink</h3>
+                <p id="more">see more ></p>
+            </div>
+            <div class="Menu--box otherBox">
+                <h3>Other</h3>
+                <p id="more">see more ></p>
+            </div>
+        </div>
+        
+        <!-- pop up -->
+        <!-- ramen menu -->
+        <div class="popup-menu popup-ramen-menu pop-hide">
+            
+            <button><i class="fas fa-times"></i></button>
+            <h1>Ramen</h1>
+            <div class="popup-ramen-p popup-container">
+                <div class="pop-ramen-c pop-box">
+                    <img src="img1/tonkotsu-ramen.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-ramen-c pop-box">
+                    <img src="img1/shouyu-ramen.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-ramen-c pop-box">
+                    <img src="img1/miso-ramen.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-ramen-c pop-box">
+                    <img src="img1/karamiso-ramen.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- appetizer -->
+        <div class="popup-menu popup-appetizer-menu pop-hide">
+            <button><i class="fas fa-times"></i></button>
+            <h1>Appetizer</h1>
+            <div class="popup-appetizer-p popup-container">
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/gyoza.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karaage.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/miso-appetizer.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karamiso-appetizer.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- drink menu -->
+        <div class="popup-menu popup-drink-menu pop-hide">
+            <button><i class="fas fa-times"></i></button>
+            <h1>Drink</h1>
+            <div class="popup-drink-p popup-container">
+                <div class="pop-drink-c pop-box">
+                    <img src="img1/asahi.jpg">
+                    <div class="menu-detail drink-detail">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail drink-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karaage.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail drink-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/miso-appetizer.jpg">
+                    <div class="menu-detail drink-detail">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail drink-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karamiso-appetizer.jpg">
+                    <div class="menu-detail drink-detail">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail drink-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other menu -->
+        <div class="popup-menu popup-others-menu pop-hide">
+            <button><i class="fas fa-times"></i></button>
+            <h1>Others</h1>
+            <div class="popup-others-p popup-container">
+                <div class="pop-others-c pop-box">
+                    <img src="img1/gyoza.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu Ramen</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karaage.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/miso-appetizer.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+                <div class="pop-appetizer-c pop-box">
+                    <img src="img1/karamiso-appetizer.jpg">
+                    <div class="menu-detail ">
+                        <h3>Tonkotsu appetizer</h3>
+                        <p>$14</p>
+                    </div>
+                    <div class="menu-detail">
+                        <p>Pork broth</p>
+                        <p>450kcal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
 
     <div class="contactUs" id="contactUs">
-        <h2>~ Contact Us ~</h2>
+        <h1>~ Contact Us ~</h1>
         <div class="contact-container">
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.7585354037487!2d-123.1221152843059!3d49.28097247933118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671821c149771%3A0xd64c377f2df4b19f!2sCornerstone%20International%20Community%20College%20of%20Canada%20-%20Tech%20Campus!5e0!3m2!1sja!2sca!4v1612848060836!5m2!1sja!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <div class="info-p">
@@ -86,7 +431,8 @@
     </footer>
 
     
-    
+    <script src="./hamburger.js"></script>
+    <script src="./slider.js"></script>
     <script src="ramen.js"></script>
 </body>
 </html>

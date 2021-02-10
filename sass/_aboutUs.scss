@@ -1,0 +1,32 @@
+.aboutUs{
+    padding: 5em 10em;
+    background-color:#E1B000;
+    text-align: center;
+
+    .about{
+        display: flex;
+        margin-top: 3em;
+        
+
+        .image{
+            flex:1;
+            display: flex;
+            align-items: center;
+
+            & img {
+                margin: 0 auto;
+                width: 90%;
+                       
+            }
+            
+        }
+        .text{
+            flex: 1;
+
+            h1{
+                font-size: 25px;
+            }
+        }
+    }
+
+}
