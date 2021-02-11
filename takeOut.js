@@ -27,10 +27,13 @@ for (let j = 0; j < plus.length; j++) {
     plus[j].addEventListener('click', () => {
         count[j].innerHTML = ++currentQuantity
         getTotal()
-        console.log(ramen)
+        // console.log(ramen)
+        setTotal()
     })
     minus[j].addEventListener('click', () => {
         count[j].innerHTML = --currentQuantity
+        getTotal()
+        setTotal()
     })
 }
 

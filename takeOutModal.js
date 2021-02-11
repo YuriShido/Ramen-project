@@ -45,12 +45,16 @@ function ramenModal() {
                 <div class="topping">
                     ${toppingHTML}
 
-                    // ---------------
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$${menuData.ramens[i].price.toFixed(2)}</h2>  //------
+                        <h2>CA$<span class="ramen-total">${menuData.ramens[i].price.toFixed(2)}</span></h2>
                     </div>
-                    // ---------------
+                    
+                    <div class="modal-addcart">
+                        <button>cancel</button>
+                        <button>add to card</button>
+                    </div>
+
                 </div>
             </div>
         `
