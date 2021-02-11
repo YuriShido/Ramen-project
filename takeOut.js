@@ -1,4 +1,5 @@
 const dark = document.getElementById('dark');
+// const cancel = document.querySelector
 const card = document.querySelectorAll('.order-card')
 const modal = document.querySelectorAll('.modal')
 const body = document.querySelector('body')
@@ -27,10 +28,13 @@ for (let j = 0; j < plus.length; j++) {
     plus[j].addEventListener('click', () => {
         count[j].innerHTML = ++currentQuantity
         getTotal()
-        console.log(ramen)
+        // console.log(ramen)
+        setTotal()
     })
     minus[j].addEventListener('click', () => {
         count[j].innerHTML = --currentQuantity
+        getTotal()
+        setTotal()
     })
 }
 
