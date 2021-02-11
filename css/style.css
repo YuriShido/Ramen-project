@@ -563,46 +563,48 @@ body {
     max-width: 80%;
     margin: 3em auto;
     text-align: end; }
-    .cart .cost a .btn {
-      text-align: left;
-      position: relative;
-      text-decoration: none;
-      display: inline-block;
-      background-color: #fff;
-      border-radius: 4px;
-      padding: 11px 20px 11px 40px;
-      color: inherit;
-      transition: all .3s;
-      border: 1px solid; }
-      .cart .cost a .btn:before, .cart .cost a .btn:after {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        transition: all .3s; }
-      .cart .cost a .btn:before {
-        left: 15px;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #614f38; }
-      .cart .cost a .btn:after {
-        left: 18px;
-        width: 5px;
-        height: 5px;
-        border-top: 2px solid #fff;
-        border-right: 2px solid #fff;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg); }
-      .cart .cost a .btn:hover {
-        background-color: #614f38;
-        color: #fff; }
-        .cart .cost a .btn:hover:before {
-          background: #fff; }
-        .cart .cost a .btn:hover:after {
-          border-color: #614f38; }
+    .cart .cost a {
+      margin-top: 20px; }
+      .cart .cost a.btn {
+        text-align: left;
+        position: relative;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 11px 20px 11px 40px;
+        color: inherit;
+        transition: all .3s;
+        border: 1px solid; }
+        .cart .cost a.btn:before, .cart .cost a.btn:after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transition: all .3s; }
+        .cart .cost a.btn:before {
+          left: 15px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #614f38; }
+        .cart .cost a.btn:after {
+          left: 18px;
+          width: 5px;
+          height: 5px;
+          border-top: 2px solid #fff;
+          border-right: 2px solid #fff;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        .cart .cost a.btn:hover {
+          background-color: #614f38;
+          color: #fff; }
+          .cart .cost a.btn:hover:before {
+            background: #fff; }
+          .cart .cost a.btn:hover:after {
+            border-color: #614f38; }
 
 body {
   font-family: 'Lato', sans-serif; }

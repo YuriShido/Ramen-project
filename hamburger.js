@@ -16,6 +16,8 @@ function hamOpenClose(){
     dark.classList.toggle('clicked');
 }
 
+ham.addEventListener('click', console.log("clicked"))
+
 dark.addEventListener('click', hamOpenClose);
 ham.addEventListener('click', hamOpenClose);
 hamTop.addEventListener('click', hamOpenClose);
