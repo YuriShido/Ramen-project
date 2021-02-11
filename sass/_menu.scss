@@ -35,14 +35,15 @@
           transition: opacity .3s ease;        
           background:rgba(0,0,0,0.5);
           opacity: 0;
+          z-index: 1;
         }
 
           &:hover {
-            z-index: 1;
             box-shadow: 0 5px 10px black;
 
             &::after{
               opacity: 1;
+              z-index: 1;
             }
             
           }
@@ -53,6 +54,7 @@
             line-height: 300px;
             font-style: italic;
             z-index: 4;
+            position:relative;
           }
 
           #more {
@@ -111,7 +113,7 @@
     button {
       float: right;
       margin: 15px;
-      
+
       .fas {
         // float: right;
         // position: absolute;
