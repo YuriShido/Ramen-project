@@ -40,6 +40,11 @@ let ramen = [[], [], [], [], [], [], [], []]
 let appetizer = []
 let drink = []
 let other = []
+const ramenTotal = document.querySelectorAll('.ramen-total')
+const appetizerTotal = document.querySelectorAll('.appetizer-total')
+const drinkTotal = document.querySelectorAll('.drink-total')
+const otherTotal = document.querySelectorAll('.other-total')
+let total = 0
 
 function getTotal() {
     let countIndex = 0
@@ -64,6 +69,45 @@ function getTotal() {
     }
 }
 // ---------------GET TOTAL---------------
+
+
+// ---------------SET TOTAL---------------
+function setTotal() {
+    total = 0
+    for (let n = 0; n < menuData.ramens.length; n++) { // 0-7 ramen-total
+        total = 0
+        ramenTotal[n].innerHTML = parseInt(ramenTotal[n].innerHTML)
+        for (o = 0; o < menuData.toppings.length; o++) {  // 0-5
+            total += ramen[n][o] * menuData.toppings[o].price
+        }
+        ramenTotal[n].innerHTML = (menuData.ramens[n].price + total).toFixed(2)
+    }
+
+    for (p = 0; p < menuData.appetizers.length; p++) { // appetizer
+        total = 0
+        appetizerTotal[p].innerHTML = parseInt(appetizerTotal[p].innerHTML)
+        total += appetizer[p] * menuData.appetizers[p].price
+        appetizerTotal[p].innerHTML = total.toFixed(2)
+    }
+
+    for (q = 0; q < menuData.drinks.length; q++) {
+        total = 0
+        drinkTotal[q].innerHTML = parseInt(drinkTotal[q].innerHTML)
+        total += drink[q] * menuData.drinks[q].price
+        drinkTotal[q].innerHTML = total.toFixed(2)
+    }
+
+    for (r = 0; r < menuData.others.length; r++) {
+        total = 0
+        otherTotal[r].innerHTML = parseInt(otherTotal[r].innerHTML)
+        total += other[r] * menuData.others[r].price
+        otherTotal[r].innerHTML = total.toFixed(2)
+    }
+}
+
+// console.log(appetizerTotal)
+
+// ---------------SET TOTAL---------------
 
 
 
