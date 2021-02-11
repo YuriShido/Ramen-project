@@ -83,7 +83,7 @@ function setTotal() {
         ramenTotal[n].innerHTML = (menuData.ramens[n].price + total).toFixed(2)
     }
 
-    for (p = 0; p < menuData.appetizers.length; p++) {
+    for (p = 0; p < menuData.appetizers.length; p++) { // appetizer
         total = 0
         appetizerTotal[p].innerHTML = parseInt(appetizerTotal[p].innerHTML)
         total += appetizer[p] * menuData.appetizers[p].price
