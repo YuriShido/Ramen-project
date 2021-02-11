@@ -1,7 +1,7 @@
 const orderCard = document.querySelectorAll('.order-card')
 const appetizerCard = document.querySelectorAll('.appetizer-card')
 const drinkCard = document.querySelectorAll('.drink-card')
-const otherCard = document.querySelectorAll('.other-card')
+const otherCard = document.querySelectorAll('.other-card');
 const oederCards = document.querySelectorAll('.orderCards')
 
 let menuData = {};
