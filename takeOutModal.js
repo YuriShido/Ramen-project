@@ -51,8 +51,8 @@ function ramenModal() {
                     </div>
                     
                     <div class="modal-addcart">
-                        <button>cancel</button>
-                        <button>add to card</button>
+                        <button class="cancel">cancel</button>
+                        <button class="addToCart">add to card</button>
                     </div>
 
                 </div>

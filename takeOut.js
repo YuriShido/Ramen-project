@@ -1,4 +1,5 @@
 const dark = document.getElementById('dark');
+// const cancel = document.querySelector
 const card = document.querySelectorAll('.order-card')
 const modal = document.querySelectorAll('.modal')
 const body = document.querySelector('body')
