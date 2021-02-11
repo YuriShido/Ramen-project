@@ -14,7 +14,7 @@ $.ajax({
     }
 });
 
-console.log(menuData)
+console.log(menuData.ramens)
 
 //get menu from json
 function getRamenMenu() {
@@ -24,6 +24,7 @@ function getRamenMenu() {
     const popBox = document.createElement('div');
     popBox.classList.add('pop-ramen-c', 'pop-box', 'popRamenC')
     const popRamenC = document.querySelector('.popRamenC');
+
     popRamenC.innerHTML = 
     `<img src="img/ramen${i+1}.jpg">
     <div class="menu-detail ">
@@ -40,7 +41,7 @@ function getRamenMenu() {
 
 function getAppetizer() {
    
-  for(let i = 0; i < manuData.ramens.length; i++) {
+  for(let i = 0; i < manuData.appetizers.length; i++) {
 
      popAppC[i].innerHTML = `
      <img src="img/appetizer${i+1}.jpg">
@@ -59,7 +60,7 @@ function getAppetizer() {
 
 function getDrinkMenu() {
 
-  for(let i = 0; i < manuData.ramens.length; i++) {
+  for(let i = 0; i < manuData.drinks.length; i++) {
 
      popDrink[i].innerHTML = `
             <img src="img/drink${i + 1}.jpg">
@@ -78,7 +79,7 @@ function getDrinkMenu() {
 
 function getOtherMenu() {
 
-  for(let i = 0; i < manuData.ramens.length; i++) {
+  for(let i = 0; i < manuData.others.length; i++) {
       
     popOthers[i].innerHTML = `
     <img src="img/other${i+1}.jpg">
