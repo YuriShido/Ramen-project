@@ -45,7 +45,9 @@ body{
 
       a{
 
-          .btn {
+          margin-top: 20px;
+
+          &.btn {
               text-align: left;
               position: relative;
               text-decoration: none;
@@ -91,7 +93,8 @@ body{
                 &:after{
                   border-color:#614f38;
                 }
-              }}
+              }
+          }
 
           
          

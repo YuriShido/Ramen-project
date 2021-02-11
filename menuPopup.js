@@ -94,7 +94,7 @@ function getOtherMenu() {
   }
 }
 
-getRamenMenu();
+// getRamenMenu();
 getAppetizer();
 // getDrinkMenu();
 getOtherMenu();
