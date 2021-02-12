@@ -5,7 +5,7 @@ const otherCard = document.querySelectorAll('.other-card');
 const oederCards = document.querySelectorAll('.orderCards')
 
 
-console.log(menuData)
+// console.log(menuData)
 
 
 

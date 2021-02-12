@@ -3,22 +3,6 @@ const modalAppetizer = document.querySelectorAll('.appetizer-modal')
 const modalDrink = document.querySelectorAll('.drink-modal')
 const modalOther = document.querySelectorAll('.other-modal')
 
-// console.log(modalOther)
-
-// let menuData = {};
-// $.ajax({
-//     url: './menuData.json',
-// 	dataType: 'json',
-// 	async: false,
-// 	success: function(json) {
-//         menuData = json;
-// 	}
-// });
-
-// ---------------------------
-let totalPrice = 0
-
-// ---------------------------
 
 function ramenModal() {
     let toppingHTML = ``;
@@ -26,10 +10,10 @@ function ramenModal() {
     for (let j = 0; j < menuData.toppings.length; j++) {
         toppingHTML += `
         <div class="topping-item">
-            <span>${menuData.toppings[j].name}</span>
+            <span>${menuData.toppings[j].name}</span>  <!-- topping name -->
             <div class="topping-item-add">
                 <span class="plus">+&nbsp</span>
-                <span class="count count${j}">0</span>
+                <span class="count ">0</span>  <!-- topping quantity -->
                 <span class="minus">&nbsp-&nbsp&nbsp</span>
                 <span>$${menuData.toppings[j].price.toFixed(2)}</span>
             </div>
@@ -39,15 +23,19 @@ function ramenModal() {
 
     for (let i = 0; i < modalRamen.length; i++) {
         modalRamen[i].innerHTML = `
-            <div class="modal-img imgRamen${i+1}">
+            <div class="modal-img imgRamen${i+1}">  <!-- img -->
             </div >
+            <span>${menuData.ramens[i].name}</span>  <!-- name -->
+
             <div class="modal-customize">
                 <div class="topping">
                     ${toppingHTML}
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$<span class="ramen-total">${menuData.ramens[i].price.toFixed(2)}</span></h2>
+                        <h2>CA$<span class="ramen-total">
+                            ${menuData.ramens[i].price.toFixed(2)}  <!-- price -->
+                        </span></h2>
                     </div>
                     
                     <div class="modal-addcart">
@@ -67,44 +55,17 @@ function ramenModal() {
     }
 }
 
-// function otherModal(className, kind) {
-//     const modal = document.querySelectorAll(className)
-//     const data = menuData.kind;
-
-//     for (let o = 0; o < modal.length; o++) {
-//         modal[i].innerHTML = `
-//         <div class="modal-img ${kind}${o+1}">
-//             </div >
-//             <div class="modal-customize">
-//                 <div class="quantity">
-//                     <div class="quantity-item">
-//                     <span class="plus">+&nbsp</span>
-//                     <span class="count">0</span>
-//                     <span class="minus">&nbsp-&nbsp&nbsp</span>
-//                     // <span>$${menuData.appetizers[k].price.toFixed(2)}</span>
-//                     </div>
-//                 </div>
-//             </div>
-//         `
-
-//         const imgAppetizer = document.querySelector(`.imgAppetizer${k+1}`)
-//         // document.querySelector(`.img${i+1}`).style.backgroundImage = "url('../img/ramen4.jpg')"
-//         imgAppetizer.style.backgroundImage = `url('../img/appetizer${k+1}.jpg')`
-//         imgAppetizer.style.backgroundSize = "cover"
-//         imgAppetizer.style.backgroundPosition = "center"
-//     }
-// }
-
 function appetizerModal() {
     for (let k = 0; k < modalAppetizer.length; k++) {
         modalAppetizer[k].innerHTML = `
-        <div class="modal-img imgAppetizer${k+1}">
+        <div class="modal-img imgAppetizer${k+1}">  <!-- img -->
             </div >
             <div class="modal-customize">
+                <span>${menuData.appetizers[k].name}</span>  <!-- name -->
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="count count${k}">0</span>
+                        <span class="count count${k}">0</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.appetizers[k].price.toFixed(2)}</span>
                     </div>
@@ -112,7 +73,9 @@ function appetizerModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$<span class="appetizer-total">${menuData.appetizers[k].price.toFixed(2)}</span></h2>
+                        <h2>CA$<span class="appetizer-total">
+                            ${menuData.appetizers[k].price.toFixed(2)}  <!-- price -->
+                        </span></h2>
                     </div>
 
                     <div class="modal-addcart">
@@ -135,13 +98,14 @@ function appetizerModal() {
 function drinkModal() {
     for (let l = 0; l < modalDrink.length; l++) {
         modalDrink[l].innerHTML = `
-        <div class="modal-img imgDrink${l+1}">
+        <div class="modal-img imgDrink${l+1}">  <!-- img -->
             </div >
             <div class="modal-customize">
+                <span>${menuData.drinks[l].name}</span>  <!-- name -->
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="count count${l}">0</span>
+                        <span class="count count${l}">0</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.drinks[l].price.toFixed(2)}</span>
                     </div>
@@ -149,7 +113,9 @@ function drinkModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$<span class="drink-total">${menuData.drinks[l].price.toFixed(2)}</span></h2>
+                        <h2>CA$<span class="drink-total">
+                            ${menuData.drinks[l].price.toFixed(2)}  <!-- price -->
+                        </span></h2>
                     </div>
 
                     <div class="modal-addcart">
@@ -172,13 +138,14 @@ function drinkModal() {
 function otherModal() {
     for (let m = 0; m < modalOther.length; m++) {
         modalOther[m].innerHTML = `
-        <div class="modal-img imgOther${m+1}">
+        <div class="modal-img imgOther${m+1}">  <!-- img -->
             </div >
             <div class="modal-customize">
+                <span>${menuData.others[m].name}</span>  <!-- name -->
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="count count${m}">0</span>
+                        <span class="count count${m}">0</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.others[m].price.toFixed(2)}</span>
                     </div>
@@ -187,7 +154,9 @@ function otherModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$<span class="other-total">${menuData.others[m].price.toFixed(2)}</span></h2>
+                        <h2>CA$<span class="other-total">
+                            ${menuData.others[m].price.toFixed(2)}  <!-- price -->
+                        </span></h2>
                     </div>
 
                     <div class="modal-addcart">
