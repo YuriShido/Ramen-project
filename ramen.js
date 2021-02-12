@@ -4,73 +4,110 @@ const ramenBox = document.querySelector('.ramenBox');
 // ramenBox.addEventListener('click', function() {
 //   ramenMenu.classList.remove('pop-hide');
 // })
-
+const dark2 = document.querySelector('#dark2');
 //ramen
-$('.ramenBox').click(function() {
-  dark.classList.add('clicked');
-  $('.popup-ramen-menu').fadeIn();
-});
+$(function () {
 
-$('.fas').click(function() {
-  $('.popup-ramen-menu').fadeOut();
-  dark.classList.remove('clicked');
+  let scrollPos;
+  $('.ramenBox').click(function() {
+    scrollPos = $(window).scrollTop();
+    dark2.classList.add('clicked');
+    $('.popup-ramen-menu').fadeIn();
+    $('body').addClass('fixed').css({ top: -scrollPos });
+    console.log(scrollPos)
+  });
+    
+    $('.fas').click(function() {
+      $('.popup-ramen-menu').fadeOut();
+      dark2.classList.remove('clicked');
+      $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+      $(window).scrollTop(scrollPos);
+    
+  });
+  
+  $(' #dark2, ramenbox').click(function() {
+    $('.popup-ramen-menu').fadeOut();
+    dark2.classList.remove('clicked');
+    $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+    $(window).scrollTop(scrollPos);
+  
 });
-
-$('#dark').click(function() {
-  $('.popup-ramen-menu').fadeOut();
-  dark.classList.remove('clicked');
 });
-// $(document).on('click touchend', function(event) {
-//   // 表示したポップアップ以外の部分をクリックしたとき
-//   if (!$(event.target).closest('.ramenBox').length) {
-//     $('.popup-ramen-menu').fadeOut();
-//   }
-// });
 
 //appetizer
-$('.appetizerBox').click(function() {
-  $('.popup-appetizer-menu').fadeIn();
-  dark.classList.add('clicked');
-});
+$(function () {
 
-$('.fas').click(function() {
-  $('.popup-appetizer-menu').fadeOut();
-  dark.classList.remove('clicked');
-});
-$('#dark').click(function() {
-  $('.popup-appetizer-menu').fadeOut();
-  dark.classList.remove('clicked');
-});
+  let scrollPos;
+  $('.appetizerBox').click(function() {
+    scrollPos = $(window).scrollTop()
+    $('.popup-appetizer-menu').fadeIn();
+    dark2.classList.add('clicked');
+    $('body').addClass('fixed').css({ top: -scrollPos });
+  });
+  
+  $('.fas, #dark2').click(function() {
+    $('.popup-appetizer-menu').fadeOut();
+    dark2.classList.remove('clicked');
+    $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+    $(window).scrollTop(scrollPos);
+  });
 
+  
+});
 
 //drink
-$('.drinkBox').click(function() {
-  $('.popup-drink-menu').fadeIn();
-  dark.classList.add('clicked');
-});
+$(function () {
 
-$('.fas').click(function() {
-  $('.popup-drink-menu').fadeOut();
-  dark.classList.remove('clicked');
-});
-$('#dark').click(function() {
-  $('.popup-drink-menu').fadeOut();
-  dark.classList.remove('clicked');
+  let scrollPos;
+  $('.drinkBox').click(function() {
+    scrollPos = $(window).scrollTop()
+    $('.popup-drink-menu').fadeIn();
+    dark2.classList.add('clicked');
+    $('body').addClass('fixed').css({ top: -scrollPos });
+  });
+  
+  $('.fas, #dark2').click(function() {
+    $('.popup-drink-menu').fadeOut();
+    dark2.classList.remove('clicked');
+    $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+    $(window).scrollTop(scrollPos);
+  });
+
+  
 });
 
 
 //others
+$(function () {
+
+  let scrollPos;
+  $('.otherBox').click(function() {
+    scrollPos = $(window).scrollTop()
+    $('.popup-others-menu').fadeIn();
+    dark2.classList.add('clicked');
+    $('body').addClass('fixed').css({ top: -scrollPos });
+  });
+  
+  $('.fas, #dark2').click(function() {
+    $('.popup-others-menu').fadeOut();
+    dark2.classList.remove('clicked');
+    $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+    $(window).scrollTop(scrollPos);
+  });
+
+  
+});
 $('.otherBox').click(function() {
   $('.popup-others-menu').fadeIn();
-  dark.classList.add('clicked');
+  dark2.classList.add('clicked');
 });
 
 $('.fas').click(function() {
   $('.popup-others-menu').fadeOut();
-  dark.classList.remove('clicked');
+  dark2.classList.remove('clicked');
 });
 
-$('#dark').click(function() {
+$('#dark2').click(function() {
   $('.popup-others-menu').fadeOut();
-  dark.classList.remove('clicked');
+  dark2.classList.remove('clicked');
 });

@@ -9,9 +9,12 @@
 }
 
 body{
-      font-family: 'Lato', sans-serif;
+      // font-family: 'Lato', sans-serif;
+      // font-family: 'Permanent Marker', cursive;
+      font-family: 'Squada One', cursive;
       font-size: 16px;
       line-height: 1.5;
+
 }
 
 //humberger-menu
@@ -29,10 +32,10 @@ body{
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
+  z-index: 80;
 
   & .ham {
-    z-index: 100;
+    z-index: 80;
     display: inline-block;
     height: 50px;
     width: 50px;
@@ -80,7 +83,7 @@ body{
   display: block;
   z-index: 10;
   position: fixed;
-  width: 300px;
+  width: 250px;
   height: 300px;
   right: -100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -93,15 +96,18 @@ body{
     flex-direction: column;
     height: 100%;
     margin: 0;
+    padding-left: 10px;
     justify-content: space-around;
 
+
     & li {
-      letter-spacing: 10px;
+      // letter-spacing: 10px;
 
       & a {
         text-decoration: none;
         padding: 5px 4px;
         font-size: 1.5rem;
+        font-weight: bold;
 
         &:link,
         &:active,

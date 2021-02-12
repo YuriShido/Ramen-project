@@ -1,9 +1,9 @@
 {
     "ramens": [
-        {"name": "しょうゆ", "price": 11.00, "description": "めっちゃ美味い"},
-        {"name": "みそ", "price": 10.00, "description": "めっちゃ美味い"},
-        {"name": "とんこつ", "price": 12.00, "description": "めっちゃ美味い"},
-        {"name": "お味噌", "price": 13.00, "description": "めっちゃ美味い"},
+        {"name": "Shoyu Ramen", "price": 11.00, "description": "tasty soy source"},
+        {"name": "Miso Ramen", "price": 10.00, "description": "めっちゃ美味い"},
+        {"name": "Tonkatsu Ramen", "price": 12.00, "description": "めっちゃ美味い"},
+        {"name": "Karamiso Ramen", "price": 13.00, "description": "めっちゃ美味い"},
         {"name": "niboshi", "price": 14.00, "description": "めっちゃ美味い"},
         {"name": "北海道みそ", "price": 15.00, "description": "めっちゃ美味い"},
         {"name": "信州みそ", "price": 16.00, "description": "めっちゃ美味い"},
