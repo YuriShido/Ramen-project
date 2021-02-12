@@ -4,8 +4,8 @@ const card = document.querySelectorAll('.order-card')
 const modal = document.querySelectorAll('.modal')
 const body = document.querySelector('body')
 
-console.log(modal.length)
-console.log(cancel.length)
+// console.log(modal.length)
+// console.log(cancel.length)
 
 
 for (let i = 0; i < modal.length; i++) {
@@ -13,10 +13,10 @@ for (let i = 0; i < modal.length; i++) {
         modal[i].style.display = "unset";
         dark.classList.add('clicked');
     })
-    
+
     dark.addEventListener('click', () => {
-            modal[i].style.display = "none";
-            dark.classList.remove('clicked');
+        modal[i].style.display = "none";
+        dark.classList.remove('clicked');
         // 個数リセットする処理書こうかなぁ
     })
     cancel[i].addEventListener('click', () => {
@@ -89,6 +89,9 @@ function getTotal() {
 // ---------------/GET TOTAL---------------
 
 
+
+
+
 // ---------------SET TOTAL---------------
 function setTotal() {
     // total = 0
@@ -99,6 +102,8 @@ function setTotal() {
             total += ramen[n][o] * menuData.toppings[o].price
         }
         ramenTotal[n].innerHTML = (menuData.ramens[n].price + total).toFixed(2)
+
+        // ここで値段とかの引数渡して、アペンドする関数呼ぶ?
     }
 
     for (p = 0; p < menuData.appetizers.length; p++) { // appetizer
@@ -129,12 +134,64 @@ function setTotal() {
 
 
 
-// ---------------APPEBD TO CART---------------
+// ---------------APPEND TO CART---------------
+// add to cart のクリックイベントここに書く
 
-const add = document.querySelectorAll('.addToCart')
+const cartWrapper = document.querySelector('.cart-wrapper')
+const addToCart = document.querySelectorAll('.addToCart')
 const items = document.querySelectorAll('.items')
 
-console.log(items)
+// console.log("length is " + items.length)
+// for (let i = 0; i < items.length; i++) {
+//     console.log("i is  now " + i)
+//     console.log("items: " + items.item(i).innerHTML)
+// }
+
+const cartContainer = document.createElement('div')
+cartContainer.classList.add('cart-container')
+
+// console.log(addToCart.item(1).innerHTML)
+// console.log(addToCart.length)
 
 
-// ---------------/APPEBD TO CART---------------
+function appendToCart(img, kind, name, toppings, quantity, price) {
+    if (kind === "ramen") quantity = 1;
+    let toppingHTML = ``
+    cartWrapper.innerHTML = `
+    <div class="cart-container">
+        <div class="image">
+            <!-- <img src="img/ramen.jpg" width="150" height="150" alt=""> -->
+            <img src="img/${img}" width="150" height="150" alt="">
+        </div>
+        <div class="items">
+            <h3>${name}</h3>
+    `
+    +
+    toppingHTML
+    +
+    `    </div>
+        <div class="price">
+            <p>Quantity: ${quantity}</p>
+            <h4>CA$${price}</h4>
+        </div>
+    </div>
+    `
+
+    if (kind === "ramen") {
+        toppingHTML = `<p>toppings :</p>`
+        for(let toppingItem of toppings) {
+            topppingHTML += `
+            <p>&emsp;&emsp;${toppingitem}</p>
+            `
+        }
+    }
+
+}
+
+for (let i = 0; i < modal.length; i++) {
+    // click
+}
+
+
+
+// ---------------/APPEND TO CART---------------
