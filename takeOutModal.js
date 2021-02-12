@@ -52,7 +52,7 @@ function ramenModal() {
                     
                     <div class="modal-addcart">
                         <button class="cancel">cancel</button>
-                        <button class="addToCart">add to card</button>
+                        <button class="addToCart">add to cart</button>
                     </div>
 
                 </div>
@@ -112,7 +112,12 @@ function appetizerModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$${menuData.appetizers[k].price.toFixed(2)}</h2>
+                        <h2>CA$<span class="appetizer-total">${menuData.appetizers[k].price.toFixed(2)}</span></h2>
+                    </div>
+
+                    <div class="modal-addcart">
+                        <button class="cancel">cancel</button>
+                        <button class="addToCart">add to cart</button>
                     </div>
 
 
@@ -144,7 +149,12 @@ function drinkModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$${menuData.drinks[l].price.toFixed(2)}</h2>
+                        <h2>CA$<span class="drink-total">${menuData.drinks[l].price.toFixed(2)}</span></h2>
+                    </div>
+
+                    <div class="modal-addcart">
+                        <button class="cancel">cancel</button>
+                        <button class="addToCart">add to cart</button>
                     </div>
 
 
@@ -177,10 +187,13 @@ function otherModal() {
 
                     <div class="modal-total">
                         <h2>Total:</h2>
-                        <h2>CA$${menuData.others[m].price.toFixed(2)}</h2>
+                        <h2>CA$<span class="other-total">${menuData.others[m].price.toFixed(2)}</span></h2>
                     </div>
 
-
+                    <div class="modal-addcart">
+                        <button class="cancel">cancel</button>
+                        <button class="addToCart">add to cart</button>
+                    </div>
 
                 </div>
             </div>

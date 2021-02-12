@@ -4,16 +4,6 @@ const drinkCard = document.querySelectorAll('.drink-card')
 const otherCard = document.querySelectorAll('.other-card');
 const oederCards = document.querySelectorAll('.orderCards')
 
-let menuData = {};
-$.ajax({
-    url: './menuData.json',
-    dataType: 'json',
-    async: false,
-    // data: { &quot;data&quot; : &quot;data&quot; },
-    success: function (json) {
-        menuData = json;
-    }
-});
 
 console.log(menuData)
 
