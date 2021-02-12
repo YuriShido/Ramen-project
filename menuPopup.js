@@ -42,6 +42,27 @@ console.log(menuData.ramens)
 //   }
 // }
 
+// function getRamenMenu() {
+
+//   for(let i = 0; i < menuData.ramens.length; i++) {
+
+//     // console.log(popBox)
+//     console.log(popRamenC)
+//     popRamenC[i].innerHTML = `
+//     <img src="img/ramen${i+1}.jpg">
+//     <div class="menu-detail ">
+//         <h3>${menuData.ramens[i].name}</h3>
+//         <p>CA$${menuData.ramens[i].price}</p>
+//     </div>
+//     <div class="menu-detail">
+//         <p>${menuData.ramens[i].description}</p>
+        
+//     </div>
+//     `
+  
+//   }
+// }
+
 function getRamenMenu() {
 
   for(let i = 0; i < menuData.ramens.length; i++) {
@@ -52,12 +73,10 @@ function getRamenMenu() {
     <img src="img/ramen${i+1}.jpg">
     <div class="menu-detail ">
         <h3>${menuData.ramens[i].name}</h3>
-        <p>CA$${menuData.ramens[i].price}</p>
-    </div>
-    <div class="menu-detail">
         <p>${menuData.ramens[i].description}</p>
-        
+        <p class="menu-price">CA$${menuData.ramens[i].price}</p>
     </div>
+   
     `
   
   }
@@ -73,12 +92,10 @@ function getAppetizer() {
      <img src="img/appetizer${i+1}.jpg">
      <div class="menu-detail ">
          <h3>${menuData.appetizers[i].name}</h3>
-         <p>CA$${menuData.appetizers[i].price}</p>
-     </div>
-     <div class="menu-detail">
          <p>${menuData.appetizers[i].description}</p>
-         
+         <p class="menu-price">CA$${menuData.appetizers[i].price}</p>
      </div>
+    
      `
   }
 
@@ -92,12 +109,10 @@ function getDrinkMenu() {
             <img src="img/drink${i + 1}.jpg">
             <div class="menu-detail drink-detail">
                 <h3>${menuData.drinks[i].name}</h3>
-                <p>CA$${menuData.drinks[i].price}</p>
-            </div>
-            <div class="menu-detail drink-detail">
                 <p>${menuData.drinks[i].description}</p>
-                
+                <p class="menu-price">CA$${menuData.drinks[i].price}</p>
             </div>
+            
      `
   }
 
@@ -112,12 +127,10 @@ function getOtherMenu() {
     <img src="img/other${i+1}.jpg">
     <div class="menu-detail ">
         <h3>${menuData.others[i].name}</h3>
-        <p>CA$${menuData.others[i].price}</p>
-    </div>
-    <div class="menu-detail">
         <p>${menuData.others[i].description}</p>
-       
+        <p class="menu-price">CA$${menuData.others[i].price}</p>
     </div>
+
     `
   }
 }
