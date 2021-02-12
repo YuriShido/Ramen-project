@@ -86,7 +86,7 @@ function getTotal() {
         countIndex++
     }
 }
-// ---------------GET TOTAL---------------
+// ---------------/GET TOTAL---------------
 
 
 // ---------------SET TOTAL---------------
@@ -125,8 +125,16 @@ function setTotal() {
 
 // console.log(appetizerTotal)
 
-// ---------------SET TOTAL---------------
+// ---------------/SET TOTAL---------------
 
 
 
-// console.log(plus.length)
+// ---------------APPEBD TO CART---------------
+
+const add = document.querySelectorAll('.addToCart')
+const items = document.querySelectorAll('.items')
+
+console.log(items)
+
+
+// ---------------/APPEBD TO CART---------------

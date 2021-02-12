@@ -663,8 +663,7 @@ h1 {
     .modal-img.img2 {
       background-image: url("../img/ramen2.jpg");
       background-size: cover;
-      background-position: center;
-      background-color: red; }
+      background-position: center; }
     .modal-img.img3 {
       background-image: url("../img/ramen3.jpg");
       background-size: cover;
@@ -694,8 +693,7 @@ h1 {
       .modal-customize .topping .modal-total,
       .modal-customize .quantity .modal-total {
         display: flex;
-        justify-content: space-between;
-        background-color: red; }
+        justify-content: space-between; }
 
 #dark {
   transition: all 0.6s ease-out; }

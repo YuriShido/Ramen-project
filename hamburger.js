@@ -1,4 +1,4 @@
-const dark = document.getElementById('dark');
+// const dark = document.getElementById('dark');
 
 const ham = document.getElementById('ham');
 const hamTop = document.getElementById('ham-top');
