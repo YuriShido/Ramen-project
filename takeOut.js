@@ -1,8 +1,12 @@
 const dark = document.getElementById('dark');
-// const cancel = document.querySelector
+const cancel = document.querySelectorAll('.cancel')
 const card = document.querySelectorAll('.order-card')
 const modal = document.querySelectorAll('.modal')
 const body = document.querySelector('body')
+
+console.log(modal.length)
+console.log(cancel.length)
+
 
 for (let i = 0; i < modal.length; i++) {
     card[i].addEventListener('click', () => {
@@ -11,6 +15,11 @@ for (let i = 0; i < modal.length; i++) {
     })
     
     dark.addEventListener('click', () => {
+            modal[i].style.display = "none";
+            dark.classList.remove('clicked');
+        // 個数リセットする処理書こうかなぁ
+    })
+    cancel[i].addEventListener('click', () => {
         modal[i].style.display = "none";
         dark.classList.remove('clicked');
         // 個数リセットする処理書こうかなぁ
@@ -29,12 +38,15 @@ for (let j = 0; j < plus.length; j++) {
         count[j].innerHTML = ++currentQuantity
         getTotal()
         // console.log(ramen)
+        // console.log(getTotal())
         setTotal()
     })
     minus[j].addEventListener('click', () => {
-        count[j].innerHTML = --currentQuantity
-        getTotal()
-        setTotal()
+        if (parseInt(count[j].innerHTML) > 0) {
+            count[j].innerHTML = --currentQuantity
+            getTotal()
+            setTotal()
+        }
     })
 }
 
@@ -49,6 +61,8 @@ const appetizerTotal = document.querySelectorAll('.appetizer-total')
 const drinkTotal = document.querySelectorAll('.drink-total')
 const otherTotal = document.querySelectorAll('.other-total')
 let total = 0
+
+// console.log(appetizerTotal)
 
 function getTotal() {
     let countIndex = 0
@@ -77,7 +91,7 @@ function getTotal() {
 
 // ---------------SET TOTAL---------------
 function setTotal() {
-    total = 0
+    // total = 0
     for (let n = 0; n < menuData.ramens.length; n++) { // 0-7 ramen-total
         total = 0
         ramenTotal[n].innerHTML = parseInt(ramenTotal[n].innerHTML)
