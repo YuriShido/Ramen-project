@@ -1,42 +1,42 @@
 {
     "ramens": [
-        {"name": "Shoyu Ramen", "price": 11.00, "description": "tasty soy source"},
-        {"name": "Miso Ramen", "price": 10.00, "description": "めっちゃ美味い"},
-        {"name": "Tonkatsu Ramen", "price": 12.00, "description": "めっちゃ美味い"},
-        {"name": "Karamiso Ramen", "price": 13.00, "description": "めっちゃ美味い"},
-        {"name": "niboshi", "price": 14.00, "description": "めっちゃ美味い"},
-        {"name": "北海道みそ", "price": 15.00, "description": "めっちゃ美味い"},
-        {"name": "信州みそ", "price": 16.00, "description": "めっちゃ美味い"},
-        {"name": "赤みそ", "price": 17.00, "description": "めっちゃ美味い"}
+        {"name": "Shoyu Ramen", "price": 11.00, "description": "Tasty soy sauce with dipping soup"},
+        {"name": "Miso Ramen", "price": 11.00, "description": "Tasty miso base soup"},
+        {"name": "Tonkatsu Ramen", "price": 11.00, "description": "Our signature pork broth soup"},
+        {"name": "Karamiso Ramen", "price": 13.00, "description": "spicy miso"},
+        {"name": "Tsukemen", "price": 14.00, "description": "House made thick boodles with special diping soup"},
+        {"name": "Spicy Tsukemen", "price": 15.00, "description": "House made thick boodles with special diping soup"},
+        {"name": "Vegetable Ramen", "price": 11.00, "description": "Vegetable broth soup"},
+        {"name": "Delux Tonkotsu", "price": 17.00, "description": "Our signature pork broth with lots of vegges"}
     ],
 
     "toppings": [
         {"name": "Ajitama", "price": 1.50},
-        {"name": "きくらげ", "price": 1.00},
-        {"name": "チャーシュ", "price": 2.00},
-        {"name": "のり", "price": 1.50},
-        {"name": "コーン", "price": 2.00},
-        {"name": "キムチ", "price": 1.50}
+        {"name": "kikurage", "price": 1.00},
+        {"name": "pork chashu", "price": 2.00},
+        {"name": "seaweed,", "price": 1.50},
+        {"name": "corn", "price": 1.00},
+        {"name": "kimuchi", "price": 1.50}
     ],
 
     "appetizers": [
-        {"name": "餃子", "price": 15.00, "description": "めっちゃ美味い"},
-        {"name": "メンマ", "price": 14.00, "description": "めっちゃ美味い"},
-        {"name": "チャーシュー", "price": 13.00, "description": "めっちゃ美味い"},
-        {"name": "のり", "price": 12.00, "description": "めっちゃ美味い"}
+        {"name": "gyoza", "price": 8.00, "description": "pork gyoza"},
+        {"name": "karaage", "price": 8.00, "description": "House made deep fried chicken"},
+        {"name": "salad", "price": 7.00, "description": "radish salada with sesami souce"},
+        {"name": "Edamame", "price": 6.00, "description": "Edamame"}
     ],
 
     "drinks": [
-        {"name": "ビール", "price": 10.00, "description": "一番美味い"},
-        {"name": "メロンソーダ", "price": 9.00, "description": "一番甘い"},
-        {"name": "日本酒", "price": 8.00, "description": "うまうま"},
-        {"name": "焼酎", "price": 7.00, "description": "まぁまぁ"}
+        {"name": "Beer", "price": 6.00, "description": "Asahi beer"},
+        {"name": "Pop", "price": 3.00, "description": "Coke, 7up, Ginger Ale, Orange"},
+        {"name": "Sake", "price": 12.00, "description": "Dassai Japanse sake"},
+        {"name": "Shyochu", "price": 9.00, "description": "Tantakatan Japanese shochu"}
     ],
     
     "others": [
-        {"name": "バニラアイス", "price": 6.00, "description": "甘々"},
-        {"name": "雪見だいふく", "price": 7.00, "description": "食べたい"},
-        {"name": "ゆずシャーベット", "price": 8.00, "description": "焼肉屋のやつ"},
-        {"name": "杏仁豆腐", "price": 9.00, "description": "ちゅうかだねぇ"}
+        {"name": "Vanilla ice", "price": 6.00, "description": "ice cream with bule berry"},
+        {"name": "Warabi Mochi", "price": 7.00, "description": "Japanese cold mochi"},
+        {"name": "Lemon Jelly", "price": 6.00, "description": "Our homemade lemon Jelly"},
+        {"name": "Almond Jelly", "price": 6.00, "description": "Chinese Almond jelly"}
     ]
 }
