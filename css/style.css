@@ -73,7 +73,8 @@ body {
       height: 100%;
       margin: 0;
       padding-left: 10px;
-      justify-content: space-around; }
+      justify-content: space-around;
+      font-family: 'Khand', sans-serif; }
       .menu ul li a {
         text-decoration: none;
         padding: 5px 4px;
@@ -391,7 +392,8 @@ Media Queries
 
 #contactUs {
   padding: 2rem;
-  background-color: #E1B000; }
+  background-color: #E1B000;
+  font-family: 'Khand', sans-serif; }
   #contactUs h1 {
     text-align: center;
     padding: 1.5rem;
@@ -418,7 +420,8 @@ Media Queries
 .footer {
   width: 100%;
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.75); }
+  background-color: rgba(0, 0, 0, 0.75);
+  font-family: 'Khand', sans-serif; }
   .footer--container {
     display: flex;
     flex-wrap: wrap;
@@ -554,7 +557,7 @@ Media Queries
     right: 15px;
     top: 15px;
     border-style: none;
-    background-color: inherit;
+    background-color: #ffffffe8;
     cursor: pointer; }
     .popup-menu button .fas {
       font-size: 2rem; }
