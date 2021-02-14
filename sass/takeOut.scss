@@ -73,7 +73,10 @@ h1 {
     z-index: 5;
     transition: all 0.2s;
 
-    &-img {
+    &-img-ramen,
+    &-img-appetizer,
+    &-img-drink,
+    &-img-other {
         height: 50%;
 
         // &.img1 {
