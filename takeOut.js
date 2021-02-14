@@ -201,17 +201,23 @@ $(function () {
 
           cartContainer.innerHTML = `
 
-          <div class="image">
-              <!-- <img src="img/ramen.jpg" width="150" height="150" alt=""> -->
-              <img src="${img}" width="150" height="150" alt="">
+          <div class="cart-content">
+            <div class="image">
+                <!-- <img src="img/ramen.jpg" width="150" height="150" alt=""> -->
+                <img src="${img}" width="150" height="150" alt="">
+            </div>
+            <div class="items">
+                <h3>${name}</h3>
+                ${toppingHTML}
+            </div>
+            <div class="price">
+                <p>Quantity: ${quantity}</p>
+                <h4>CA$<span class="price-item">${price}</span></h4>
+            </div>
           </div>
-          <div class="items">
-              <h3>${name}</h3>
-              ${toppingHTML}
-          </div>
-          <div class="price">
-              <p>Quantity: ${quantity}</p>
-              <h4>CA$${price}</h4>
+
+          <div class="cart-bottom">
+            <span class="remove">Remove</span>
           </div>
 
           `
@@ -240,10 +246,10 @@ $(function () {
 
           // console.log(toppingHTML)
           // cartItemsHTML.push(cartContainer)
-          
+
           cartItemsHTML.push(cartContainer)
           // window.localStorage.setItem('item', cartContainer);
-          
+
           // return cartItemsHTML
           // console.log(typeof(cartWrapper[0].innerHTML))
           // console.log(cartWrapper[0].innerHTML)
@@ -257,18 +263,11 @@ $(function () {
 
         const ramenImg = document.querySelectorAll('.modal-img-ramen')
         const ramenName = document.querySelectorAll('.modal-name-ramen')
-        // const ramenQuantity = document.querySelectorAll('.modal-quantity-ramen')
         const ramenPrice = document.querySelectorAll('.modal-price-ramen')
-
         const addRamen = document.querySelectorAll('.addRamen')
-        const addAppetizer = document.querySelectorAll('.addAppetizer')
-        const addDrink = document.querySelectorAll('.addDrink')
-        const addOther = document.querySelectorAll('.addRamen')
+
 
         const image = document.querySelectorAll('.order-card-img > img')
-
-
-        // console.log(countTopping.length)
 
         const createToppingArray = (index) => {
           let toppingArray = []
@@ -293,8 +292,6 @@ $(function () {
         }
         // console.log(ramenQuantity[0].innerHTML)
 
-
-
         for (let i = 0; i < addRamen.length; i++) {
           // console.log(toppingArray)
           addRamen[i].addEventListener('click', () => {
@@ -302,9 +299,6 @@ $(function () {
             const name = ramenName[i].innerHTML
             // const price = parseInt(ramenPrice[i].innerHTML)
             const price = parseFloat(ramenPrice[i].innerHTML)
-            // const quantity = ramenQuantity[i].innerHTML
-            // createToppingArray()
-            // console.log(name)
 
             // console.log(imagePath)
             // console.log(name)
@@ -320,11 +314,11 @@ $(function () {
             // window.localStorage.setItem('items', JSON.stringify(cartWrapperHTML));
             window.localStorage.setItem('items', cartWrapperHTML);
             const itemObj = window.localStorage.getItem('items')
-            
+
             // for (let j = 0; j < cartWrapperHTML.length; j++) {
-              //   window.localStorage.setItem('items', cartWrapperHTML[i]);
-              // }
-              
+            //   window.localStorage.setItem('items', cartWrapperHTML[i]);
+            // }
+
             // const cartContainerHTML = getCartWrapperHTML(imagePath, "ramen", name, createToppingArray(i), 1, price)
             // window.localStorage.setItem(`item${i}`, cartContainerHTML);
             // window.localStorage.setItem('items', cartWrapperHTML);
@@ -336,23 +330,94 @@ $(function () {
         }
 
 
-        const refresh = document.querySelector('.refresh')
-        refresh.addEventListener('click', (e) => {
-          e.preventDefault()
-          // $(".cart-wrapper").load("")
-          // cartWrapper.appendChild()
-          // console.log(cartItemsHTML)
-          // cartWrapper.innerHTML = cartWrapperHTML
+        const appetizerImg = document.querySelectorAll('.modal-img-appetizer')
+        const appetizerName = document.querySelectorAll('.modal-name-appetizer')
+        const appetizerPrice = document.querySelectorAll('.modal-price-appetizer')
+        const appetizerQuantity = document.querySelectorAll('.modal-quantity-appetizer')
+        const addAppetizer = document.querySelectorAll('.addAppetizer')
+        const imagePathAppetizer = document.querySelectorAll('.appetizer img')
+        // console.log(addAppetizer.length)
+        for (let i = 0; i < addAppetizer.length; i++) {
+          addAppetizer[i].addEventListener('click', () => {
+            const imagePath = imagePathAppetizer[i].getAttribute('src')
+            const name = appetizerName[i].innerHTML
+            const price = parseFloat(appetizerPrice[i].innerHTML)
+            const quantity = parseInt(appetizerQuantity[i].innerHTML)
+  
+            // console.log(imagePath)
+            // console.log(name)
+            // console.log(price)
+            console.log(quantity)
 
-          for (let i = 0; i < cartItemsHTML.length; i++) {
-            cartWrapper.appendChild(cartItemsHTML[i])
-          }
+            cartWrapperHTML = getCartWrapperHTML(imagePath, "appetizer", name, [], quantity, price)
+            window.localStorage.setItem('items', cartWrapperHTML);
+          })
+        }
+
+        const drinkImg = document.querySelectorAll('.modal-img-drink')
+        const drinkName = document.querySelectorAll('.modal-name-drink')
+        const drinkPrice = document.querySelectorAll('.modal-price-drink')
+        const drinkQuantity = document.querySelectorAll('.modal-quantity-drink')
+        const addDrink = document.querySelectorAll('.addDrink')
+        const imagePathDrink = document.querySelectorAll('.drink img')
+
+        for (let i = 0; i < addDrink.length; i++) {
+          addDrink[i].addEventListener('click', () => {
+            const imagePath = imagePathDrink[i].getAttribute('src')
+            const name = drinkName[i].innerHTML
+            const price = parseFloat(drinkPrice[i].innerHTML)
+            const quantity = parseInt(drinkQuantity[i].innerHTML)
+  
+            // console.log(imagePath)
+            // console.log(name)
+            // console.log(price)
+            // console.log(quantity)
+
+            cartWrapperHTML = getCartWrapperHTML(imagePath, "drink", name, [], quantity, price)
+            window.localStorage.setItem('items', cartWrapperHTML);
+          })
+        }
+
+        const otherImg = document.querySelectorAll('.modal-img-other')
+        const otherName = document.querySelectorAll('.modal-name-other')
+        const otherPrice = document.querySelectorAll('.modal-price-other')
+        const otherQuantity = document.querySelectorAll('.modal-quantity-other')
+        const addOther = document.querySelectorAll('.addOther')
+        const imagePathOther = document.querySelectorAll('.other img')
+
+        for (let i = 0; i < addOther.length; i++) {
+          addOther[i].addEventListener('click', () => {
+            const imagePath = imagePathOther[i].getAttribute('src')
+            const name = otherName[i].innerHTML
+            const price = parseFloat(otherPrice[i].innerHTML)
+            const quantity = parseInt(otherQuantity[i].innerHTML)
+  
+            console.log(imagePath)
+            console.log(name)
+            console.log(price)
+            console.log(quantity)
+
+            cartWrapperHTML = getCartWrapperHTML(imagePath, "other", name, [], quantity, price)
+            window.localStorage.setItem('items', cartWrapperHTML);
+          })
+        }
 
 
-          // console.log("clicked")
-        })
+        // const refresh = document.querySelector('.refresh')
+        // refresh.addEventListener('click', (e) => {
+        //   e.preventDefault()
+        //   // $(".cart-wrapper").load("")
+        //   // cartWrapper.appendChild()
+        //   // console.log(cartItemsHTML)
+        //   // cartWrapper.innerHTML = cartWrapperHTML
+
+        //   for (let i = 0; i < cartItemsHTML.length; i++) {
+        //     cartWrapper.appendChild(cartItemsHTML[i])
+        //   }
 
 
+        //   // console.log("clicked")
+        // })
       })
 })
 

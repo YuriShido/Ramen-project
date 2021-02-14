@@ -65,7 +65,7 @@ function appetizerModal() {
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="count modal-quantity-appetizer">0</span>  <!-- quantity -->
+                        <span class="count modal-quantity-appetizer">1</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.appetizers[k].price.toFixed(2)}</span>
                     </div>
@@ -105,7 +105,7 @@ function drinkModal() {
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="modal-quantity-drink count">0</span>  <!-- quantity -->
+                        <span class="modal-quantity-drink count">1</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.drinks[l].price.toFixed(2)}</span>
                     </div>
@@ -145,7 +145,7 @@ function otherModal() {
                 <div class="quantity">
                     <div class="quantity-item">
                         <span class="plus">+&nbsp</span>
-                        <span class="modal-quantity-other count">0</span>  <!-- quantity -->
+                        <span class="modal-quantity-other count">1</span>  <!-- quantity -->
                         <span class="minus">&nbsp-&nbsp&nbsp</span>
                         <span>$${menuData.others[m].price.toFixed(2)}</span>
                     </div>
