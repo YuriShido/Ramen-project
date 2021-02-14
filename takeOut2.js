@@ -4,8 +4,6 @@ const card = document.querySelectorAll('.order-card')
 const modal = document.querySelectorAll('.modal')
 const body = document.querySelector('body')
 
-// body.appendChild("Yo")
-
 // console.log(modal.length)
 // console.log(cancel.length)
 
@@ -137,17 +135,13 @@ function setTotal() {
 
 // ---------------APPEND TO CART---------------
 // add to cart のクリックイベントここに書く
-// const url = location.pathname
-// location.pathname = /
-// console.log(url)
 
 $(function(){
     'use strict';
   
     $.ajax({
       type:'GET',
-    //   url:'/cart/',
-    url:'/cart.html',
+      url:'/about/',
       dataType:'html'
     })
     .then(
@@ -155,17 +149,14 @@ $(function(){
       //通信成功時
       function(data){
 
-// const cartWrapper = document.querySelector('.cart-wrapper')
-const cartWrapper = $(data).find('.cart-wrapper')
+
+const cartWrapper = document.querySelector('.cart-wrapper')
 const addToCart = document.querySelectorAll('.add-to-cart')
 const items = document.querySelectorAll('.items')
 
 const cartContainer = document.createElement('div')
 cartContainer.classList.add('cart-container')
 
-console.log(cartWrapper[0])
-// console.log(cartWrapper[0].innerHTML)
-console.log(cartContainer)
 
 
 function appendToCart(img, kind, name, toppingArr, quantity, price) {
@@ -176,6 +167,8 @@ function appendToCart(img, kind, name, toppingArr, quantity, price) {
     // console.log(toppingArr)
     // console.log(quantity)
     // console.log(price)
+    console.log(cartWrapper)
+    console.log(cartContainer)
 
     let toppingHTML = ``;
 
@@ -207,11 +200,12 @@ function appendToCart(img, kind, name, toppingArr, quantity, price) {
 
     `
 
-    cartWrapper[0].appendChild(cartContainer)
+    cartWrapper.appendChild(cartContainer)
     // console.log(toppingHTML)
 
 }
-
+})
+})
 
 
 // appendToCart("image1", "ramen", "Gyoza", ["味玉", "メンマ"], 2, 19)
@@ -253,39 +247,34 @@ const createToppingArray = (index) => {
     return toppingArray
 }
 // console.log(ramenQuantity[0].innerHTML)
+for (let i = 0; i < addRamen.length; i++) {
+    // console.log(toppingArray)
+    addRamen[i].addEventListener('click', () => {
+        const imagePath = image[i].getAttribute('src')
+        const name = ramenName[i].innerHTML
+        // const price = parseInt(ramenPrice[i].innerHTML)
+        const price = parseFloat(ramenPrice[i].innerHTML)
+        // const quantity = ramenQuantity[i].innerHTML
+        // createToppingArray()
+        // console.log(name)
 
+        // console.log(typeof(imagePath))
+        // console.log(imagePath)
+        // console.log(typeof(name))
+        // console.log(name)
+        // console.log(createToppingArray(i))
+        // console.log(typeof(price))
+        // console.log(price)
+        // createToppingArray(i)
 
-    for (let i = 0; i < addRamen.length; i++) {
-        // console.log(toppingArray)
-        addRamen[i].addEventListener('click', () => {
-            const imagePath = image[i].getAttribute('src')
-            const name = ramenName[i].innerHTML
-            // const price = parseInt(ramenPrice[i].innerHTML)
-            const price = parseFloat(ramenPrice[i].innerHTML)
-            // const quantity = ramenQuantity[i].innerHTML
-            // createToppingArray()
-            // console.log(name)
-    
-            // console.log(typeof(imagePath))
-            // console.log(imagePath)
-            // console.log(typeof(name))
-            // console.log(name)
-            // console.log(createToppingArray(i))
-            // console.log(typeof(price))
-            // console.log(price)
-            // createToppingArray(i)
-    
-            // console.log(price)
-            // console.log(createToppingArray())
-            // console.log(ramenQuantity[i].innerHTML)
-            // appendToCart(ramenImg)
-            appendToCart(imagePath, "ramen", name, createToppingArray(), 1, price)
-        })
-        // appendToCart(`ramen${i+1}`, "ramen", )
-    }
-
-})
-})
+        // console.log(price)
+        // console.log(createToppingArray())
+        // console.log(ramenQuantity[i].innerHTML)
+        // appendToCart(ramenImg)
+        appendToCart(imagePath, "ramen", name, createToppingArray(), 1, price)
+    })
+    // appendToCart(`ramen${i+1}`, "ramen", )
+}
 
 // const imageSrc = image[0].getAttribute('src')
 // console.log(imageSrc0)

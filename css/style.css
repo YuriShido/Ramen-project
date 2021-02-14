@@ -726,17 +726,17 @@ h1 {
   width: 50vw;
   z-index: 5;
   transition: all 0.2s; }
-  .modal-img {
+  .modal-img-ramen, .modal-img-appetizer, .modal-img-drink, .modal-img-other {
     height: 50%; }
-    .modal-img.img2 {
+    .modal-img-ramen.img2, .modal-img-appetizer.img2, .modal-img-drink.img2, .modal-img-other.img2 {
       background-image: url("../img/ramen2.jpg");
       background-size: cover;
       background-position: center; }
-    .modal-img.img3 {
+    .modal-img-ramen.img3, .modal-img-appetizer.img3, .modal-img-drink.img3, .modal-img-other.img3 {
       background-image: url("../img/ramen3.jpg");
       background-size: cover;
       background-position: center; }
-    .modal-img.img4 {
+    .modal-img-ramen.img4, .modal-img-appetizer.img4, .modal-img-drink.img4, .modal-img-other.img4 {
       background-image: url("../img/ramen4.jpg");
       background-size: cover;
       background-position: center; }
