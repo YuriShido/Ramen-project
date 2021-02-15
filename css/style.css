@@ -770,7 +770,7 @@ h1 {
         .modal-customize .topping-item .minus,
         .modal-customize .quantity-item .plus,
         .modal-customize .quantity-item .minus {
-          cursor: unset; }
+          cursor: pointer; }
       .modal-customize .topping .modal-total,
       .modal-customize .quantity .modal-total {
         display: flex;

@@ -144,6 +144,7 @@ function setTotal() {
 // console.log(url)
 
 let cartWrapperHTML = ``
+let cartContainerHTML = ``
 
 
 $(function () {
@@ -164,6 +165,8 @@ $(function () {
         const cartWrapper = $(data).find('.cart-wrapper')
         const addToCart = document.querySelectorAll('.add-to-cart')
         const items = document.querySelectorAll('.items')
+
+        const span = document.createElement('span')
 
 
         // console.log(cartWrapper)
@@ -203,7 +206,6 @@ $(function () {
 
           <div class="cart-content">
             <div class="image">
-                <!-- <img src="img/ramen.jpg" width="150" height="150" alt=""> -->
                 <img src="${img}" width="150" height="150" alt="">
             </div>
             <div class="items">
@@ -227,7 +229,10 @@ $(function () {
 
           // const span = document.createElement('span')
           // span.innerText = "Yoo"
+          // console.log(str)
+          cartWrapper[0].innerHTML = ``
           cartWrapper[0].appendChild(cartContainer)
+          // cartWrapper[0].appendChild(span)
 
           // console.log(cartWrapper[0])
           // console.log(typeof(cartContainer))
@@ -253,13 +258,19 @@ $(function () {
           // return cartItemsHTML
           // console.log(typeof(cartWrapper[0].innerHTML))
           // console.log(cartWrapper[0].innerHTML)
+// ------------------------------------------------------------------------
+          // return cartWrapper[0].innerHTML
+// ------------------------------------------------------------------------
           return cartWrapper[0].innerHTML
+// ------------------------------------------------------------------------
+
 
         }
 
 
-
+// ------------------------------------------------------------------------
         // appendToCart("image1", "ramen", "Gyoza", ["味玉", "メンマ"], 2, 19)
+        let localStorageIndex = 0
 
         const ramenImg = document.querySelectorAll('.modal-img-ramen')
         const ramenName = document.querySelectorAll('.modal-name-ramen')
@@ -292,6 +303,9 @@ $(function () {
         }
         // console.log(ramenQuantity[0].innerHTML)
 
+        
+        let currentLength = 0
+
         for (let i = 0; i < addRamen.length; i++) {
           // console.log(toppingArray)
           addRamen[i].addEventListener('click', () => {
@@ -309,10 +323,29 @@ $(function () {
             // console.log(createToppingArray())
             // console.log(ramenQuantity[i].innerHTML)
             // appendToCart(ramenImg)
-            cartWrapperHTML = getCartWrapperHTML(imagePath, "ramen", name, createToppingArray(i), 1, price)
+// ------------------------------------------------------------------------
+            // cartWrapperHTML = getCartWrapperHTML(imagePath, "ramen", name, createToppingArray(i), 1, price)
+// ------------------------------------------------------------------------
+            cartContainerHTML = getCartWrapperHTML(imagePath, "ramen", name, createToppingArray(i), 1, price)
+// ------------------------------------------------------------------------
+
             // console.log(typeof(cartWrapperHTML))
             // window.localStorage.setItem('items', JSON.stringify(cartWrapperHTML));
-            window.localStorage.setItem('items', cartWrapperHTML);
+// ------------------------------------------------------------------------
+            // window.localStorage.setItem('items', cartWrapperHTML);
+// ------------------------------------------------------------------------
+            // window.localStorage.setItem(`localStorageLength`, 0)
+            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
+            // window.localStorage.setItem(`localStorageLength`, currentLength)
+            // console.log(localStorageIndex)
+            localStorageIndex++
+            currentLength++
+            window.localStorage.setItem(`localStorageLength`, currentLength)
+
+// ------------------------------------------------------------------------
+
+            // cartWrapper[0].appendChild(span)
+
             const itemObj = window.localStorage.getItem('items')
 
             // for (let j = 0; j < cartWrapperHTML.length; j++) {
