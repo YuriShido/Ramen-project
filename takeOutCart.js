@@ -41,7 +41,7 @@ function setTotalAmount() {
       // console.log(priceItem[0].innerHTML)
       totalAmount += parseFloat(priceItem[j].innerHTML)
     }
-    priceTotal.innerHTML = totalAmount
+    priceTotal.innerHTML = totalAmount.toFixed(2)
   }
 }
 

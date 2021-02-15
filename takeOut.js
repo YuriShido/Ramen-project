@@ -335,9 +335,9 @@ $(function () {
             // window.localStorage.setItem('items', cartWrapperHTML);
 // ------------------------------------------------------------------------
             // window.localStorage.setItem(`localStorageLength`, 0)
-            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
             // window.localStorage.setItem(`localStorageLength`, currentLength)
             // console.log(localStorageIndex)
+            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
             localStorageIndex++
             currentLength++
             window.localStorage.setItem(`localStorageLength`, currentLength)
@@ -380,10 +380,14 @@ $(function () {
             // console.log(imagePath)
             // console.log(name)
             // console.log(price)
-            console.log(quantity)
+            // console.log(quantity)
 
-            cartWrapperHTML = getCartWrapperHTML(imagePath, "appetizer", name, [], quantity, price)
-            window.localStorage.setItem('items', cartWrapperHTML);
+            // window.localStorage.setItem('items', cartWrapperHTML);
+            cartContainerHTML = getCartWrapperHTML(imagePath, "appetizer", name, [], quantity, price)
+            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
+            localStorageIndex++
+            currentLength++
+            window.localStorage.setItem(`localStorageLength`, currentLength)
           })
         }
 
@@ -406,8 +410,11 @@ $(function () {
             // console.log(price)
             // console.log(quantity)
 
-            cartWrapperHTML = getCartWrapperHTML(imagePath, "drink", name, [], quantity, price)
-            window.localStorage.setItem('items', cartWrapperHTML);
+            cartContainerHTML = getCartWrapperHTML(imagePath, "appetizer", name, [], quantity, price)
+            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
+            localStorageIndex++
+            currentLength++
+            window.localStorage.setItem(`localStorageLength`, currentLength)
           })
         }
 
@@ -430,8 +437,11 @@ $(function () {
             console.log(price)
             console.log(quantity)
 
-            cartWrapperHTML = getCartWrapperHTML(imagePath, "other", name, [], quantity, price)
-            window.localStorage.setItem('items', cartWrapperHTML);
+            cartContainerHTML = getCartWrapperHTML(imagePath, "appetizer", name, [], quantity, price)
+            window.localStorage.setItem(`item${currentLength}`, cartContainerHTML)
+            localStorageIndex++
+            currentLength++
+            window.localStorage.setItem(`localStorageLength`, currentLength)
           })
         }
 
