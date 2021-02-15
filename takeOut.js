@@ -453,14 +453,6 @@ $(function () {
         //   // cartWrapper.appendChild()
         //   // console.log(cartItemsHTML)
         //   // cartWrapper.innerHTML = cartWrapperHTML
-
-        //   for (let i = 0; i < cartItemsHTML.length; i++) {
-        //     cartWrapper.appendChild(cartItemsHTML[i])
-        //   }
-
-
-        //   // console.log("clicked")
-        // })
       })
 })
 

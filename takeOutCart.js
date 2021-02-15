@@ -21,11 +21,6 @@ let removeLength = 0;
 // let currentLength = 0;
 let currentLength = window.localStorage.getItem('localStorageLength')
 
-// function reflesh() {
-//   cartWrapper.innerHTML = items
-//   cartContainer = document.querySelectorAll('.cart-container')
-//   remove = document.querySelectorAll('.remove')
-// }
 
 
 function setTotalAmount() {
