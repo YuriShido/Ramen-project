@@ -728,14 +728,10 @@ h1 {
         width: 100%; }
     .order-cards .order-card-info {
       padding: 3px; }
-      .order-cards .order-card-info .info-title {
-        font-weight: 400; }
-      .order-cards .order-card-info .info-description {
-        font-weight: 300; }
       .order-cards .order-card-info p {
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: 2%;
         text-align: right;
         font-weight: 300; }
 
@@ -769,6 +765,8 @@ h1 {
       background-position: center; }
   .modal-customize {
     height: 45%; }
+    .modal-customize > span {
+      margin: 1vh 0 0 2vh; }
     .modal-customize .topping,
     .modal-customize .quantity {
       height: 100%;
@@ -826,8 +824,12 @@ h1 {
   opacity: 0.5;
   z-index: 2; }
 
-@media (max-width: 480px) {
+@media (max-width: 960px) {
   .order-cards .order-card {
     width: 40%; }
   .modal {
     width: 80vw; } }
+
+@media (max-width: 480px) {
+  .order-cards .order-card {
+    width: 90%; } }
