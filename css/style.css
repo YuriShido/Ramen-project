@@ -691,7 +691,7 @@ body {
             border-color: #614f38; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: "Squada One", cursive; }
 
 h1 {
   text-align: center;
@@ -704,13 +704,14 @@ h1 {
   width: 100%;
   height: 100%; }
   .order-cards .order-card {
+    position: relative;
     background-color: #d8a14f;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 22%;
     margin: 1vw;
-    height: 200px;
+    height: 300px;
     font-weight: 100;
     border: 1px solid #000;
     transition: all 0.2s ease-out; }
@@ -727,7 +728,14 @@ h1 {
         width: 100%; }
     .order-cards .order-card-info {
       padding: 3px; }
+      .order-cards .order-card-info .info-title {
+        font-weight: 400; }
+      .order-cards .order-card-info .info-description {
+        font-weight: 300; }
       .order-cards .order-card-info p {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         text-align: right;
         font-weight: 300; }
 
@@ -742,6 +750,9 @@ h1 {
   width: 50vw;
   z-index: 5;
   transition: all 0.2s; }
+  .modal > span {
+    display: inline-block;
+    margin: 1vh 0 0 2vh; }
   .modal-img-ramen, .modal-img-appetizer, .modal-img-drink, .modal-img-other {
     height: 50%; }
     .modal-img-ramen.img2, .modal-img-appetizer.img2, .modal-img-drink.img2, .modal-img-other.img2 {
@@ -757,7 +768,7 @@ h1 {
       background-size: cover;
       background-position: center; }
   .modal-customize {
-    height: 50%; }
+    height: 45%; }
     .modal-customize .topping,
     .modal-customize .quantity {
       height: 100%;
@@ -774,6 +785,29 @@ h1 {
         .modal-customize .quantity-item .plus,
         .modal-customize .quantity-item .minus {
           cursor: pointer; }
+      .modal-customize .topping .modal-addcart,
+      .modal-customize .quantity .modal-addcart {
+        display: flex;
+        justify-content: space-around; }
+        .modal-customize .topping .modal-addcart button,
+        .modal-customize .quantity .modal-addcart button {
+          width: 40%; }
+        .modal-customize .topping .modal-addcart .cancel,
+        .modal-customize .topping .modal-addcart .add-to-cart,
+        .modal-customize .quantity .modal-addcart .cancel,
+        .modal-customize .quantity .modal-addcart .add-to-cart {
+          color: #614f38;
+          display: inline-block;
+          cursor: pointer;
+          padding: 7px 8px;
+          border: 1px solid;
+          transition: all .3s; }
+          .modal-customize .topping .modal-addcart .cancel:hover,
+          .modal-customize .topping .modal-addcart .add-to-cart:hover,
+          .modal-customize .quantity .modal-addcart .cancel:hover,
+          .modal-customize .quantity .modal-addcart .add-to-cart:hover {
+            color: #fff;
+            background-color: #614f38; }
       .modal-customize .topping .modal-total,
       .modal-customize .quantity .modal-total {
         display: flex;
@@ -791,3 +825,9 @@ h1 {
   background-color: #000000;
   opacity: 0.5;
   z-index: 2; }
+
+@media (max-width: 480px) {
+  .order-cards .order-card {
+    width: 40%; }
+  .modal {
+    width: 80vw; } }
