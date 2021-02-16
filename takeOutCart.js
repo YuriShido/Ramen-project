@@ -117,6 +117,17 @@ refresh.addEventListener('click', (e) => {
   }
 })
 
+const pay = document.querySelector('.pay')
+pay.addEventListener('click', (e) => {
+  // e.preventDefault()
+  alert("Thank you for shopping at Mr. Ramen!")
+
+  for (let i = 0; i < cartContainer.length; i++) {
+    // console.log(i)
+    window.localStorage.removeItem(`item${i}`)
+  }
+})
+
 // while(true) {
 // reflesh()
 

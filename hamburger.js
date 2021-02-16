@@ -1,5 +1,6 @@
 // const dark = document.getElementById('dark');
 
+const hero = document.querySelector('.hero')
 const ham = document.getElementById('ham');
 const hamTop = document.getElementById('ham-top');
 const hamAbout = document.getElementById('ham-about');
@@ -13,15 +14,21 @@ function hamOpenClose(){
     ham.classList.toggle('clicked');
     menu_wrapper.classList.toggle('clicked');
     
+
     dark.classList.toggle('clicked');
 }
 
 // ham.addEventListener('click', console.log("clicked"))
 
-dark.addEventListener('click', hamOpenClose);
+// if (!dark.classList.contains('clicked')) {
+//     dark.addEventListener('clicked', hamOpenClose);   
+// }
+
 ham.addEventListener('click', hamOpenClose);
 hamTop.addEventListener('click', hamOpenClose);
 hamAbout.addEventListener('click', hamOpenClose);
 hamProducts.addEventListener('click', hamOpenClose);
 hamLocation.addEventListener('click', hamOpenClose);
 hamContact.addEventListener('click', hamOpenClose);
+
+hero.addEventListener('click', hamOpenClose);

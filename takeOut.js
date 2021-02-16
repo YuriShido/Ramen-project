@@ -15,6 +15,7 @@ for (let i = 0; i < modal.length; i++) {
   card[i].addEventListener('click', () => {
     modal[i].style.display = "unset";
     dark.classList.add('clicked');
+    // console.log(`card${i} is clicked`)
   })
 
   dark.addEventListener('click', () => {
@@ -179,9 +180,6 @@ $(function () {
           const cartContainer = document.createElement('div')
 
           cartContainer.classList.add('cart-container')
-          // console.log(cartWrapper[0])
-          // console.log(cartContainer)
-          // if (kind === "ramen") quantity = 1;
           // console.log(img)
           // console.log(kind)
           // console.log(name)
@@ -313,6 +311,7 @@ $(function () {
             const name = ramenName[i].innerHTML
             // const price = parseInt(ramenPrice[i].innerHTML)
             const price = parseFloat(ramenPrice[i].innerHTML)
+            alert("Successfully Added!")
 
             // console.log(imagePath)
             // console.log(name)
@@ -376,6 +375,8 @@ $(function () {
             const name = appetizerName[i].innerHTML
             const price = parseFloat(appetizerPrice[i].innerHTML)
             const quantity = parseInt(appetizerQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             // console.log(imagePath)
             // console.log(name)
@@ -404,6 +405,8 @@ $(function () {
             const name = drinkName[i].innerHTML
             const price = parseFloat(drinkPrice[i].innerHTML)
             const quantity = parseInt(drinkQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             // console.log(imagePath)
             // console.log(name)
@@ -431,6 +434,8 @@ $(function () {
             const name = otherName[i].innerHTML
             const price = parseFloat(otherPrice[i].innerHTML)
             const quantity = parseInt(otherQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             console.log(imagePath)
             console.log(name)
