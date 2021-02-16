@@ -15,6 +15,7 @@ for (let i = 0; i < modal.length; i++) {
   card[i].addEventListener('click', () => {
     modal[i].style.display = "unset";
     dark.classList.add('clicked');
+    // console.log(`card${i} is clicked`)
   })
 
   dark.addEventListener('click', () => {
@@ -179,9 +180,6 @@ $(function () {
           const cartContainer = document.createElement('div')
 
           cartContainer.classList.add('cart-container')
-          // console.log(cartWrapper[0])
-          // console.log(cartContainer)
-          // if (kind === "ramen") quantity = 1;
           // console.log(img)
           // console.log(kind)
           // console.log(name)
