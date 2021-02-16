@@ -311,6 +311,7 @@ $(function () {
             const name = ramenName[i].innerHTML
             // const price = parseInt(ramenPrice[i].innerHTML)
             const price = parseFloat(ramenPrice[i].innerHTML)
+            alert("Successfully Added!")
 
             // console.log(imagePath)
             // console.log(name)
@@ -374,6 +375,8 @@ $(function () {
             const name = appetizerName[i].innerHTML
             const price = parseFloat(appetizerPrice[i].innerHTML)
             const quantity = parseInt(appetizerQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             // console.log(imagePath)
             // console.log(name)
@@ -402,6 +405,8 @@ $(function () {
             const name = drinkName[i].innerHTML
             const price = parseFloat(drinkPrice[i].innerHTML)
             const quantity = parseInt(drinkQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             // console.log(imagePath)
             // console.log(name)
@@ -429,6 +434,8 @@ $(function () {
             const name = otherName[i].innerHTML
             const price = parseFloat(otherPrice[i].innerHTML)
             const quantity = parseInt(otherQuantity[i].innerHTML)
+            alert("Successfully Added!")
+
   
             console.log(imagePath)
             console.log(name)

@@ -14,12 +14,15 @@ function hamOpenClose(){
     ham.classList.toggle('clicked');
     menu_wrapper.classList.toggle('clicked');
     
+
     dark.classList.toggle('clicked');
 }
 
 // ham.addEventListener('click', console.log("clicked"))
 
-dark.addEventListener('click', hamOpenClose);
+// if (!dark.classList.contains('clicked')) {
+//     dark.addEventListener('clicked', hamOpenClose);   
+// }
 
 ham.addEventListener('click', hamOpenClose);
 hamTop.addEventListener('click', hamOpenClose);
